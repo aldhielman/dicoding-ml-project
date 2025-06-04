@@ -61,6 +61,9 @@ Menurut riset [Putra, et al., 2021](https://scholar.google.com), harga tiket pes
 
 ## Data Preparation
 
+**Mengapa Data Preparation Diperlukan?**
+Data preparation sangat penting untuk memastikan kualitas data sebelum masuk ke tahap modeling. Parsing waktu dan membuat kolom days_before_departure memastikan model memahami konteks waktu pembelian tiket, yang sangat relevan dengan harga. Penambahan is_holiday dan is_weekend sebagai variabel binary membantu model menangkap pola permintaan yang fluktuatif pada periode liburan dan akhir pekan. Tanpa data preparation yang baik, model dapat underfit atau overfit karena input data yang tidak konsisten atau tidak relevan.
+
 - Parsing `depart_date` dan `extract_timestamp` ke datetime.  
 - Buat kolom `days_before_departure` (selisih hari beli tiket).  
 - Buat kolom `is_holiday` (0/1) menggunakan library holidays.
@@ -94,18 +97,14 @@ Menurut riset [Putra, et al., 2021](https://scholar.google.com), harga tiket pes
 ## Evaluation
 
 **Metrik Evaluasi:**  
-- **Mean Absolute Error (MAE)**  
-- **Mean Squared Error (MSE)**  
-- **R² Score**  
-
-**Formula:**  
-- MAE = \( \frac{1}{n} \sum_{i=1}^n |y_i - \hat{y}_i| \)  
-- MSE = \( \frac{1}{n} \sum_{i=1}^n (y_i - \hat{y}_i)^2 \)  
-- R² = \( 1 - \frac{\sum (y_i - \hat{y}_i)^2}{\sum (y_i - \bar{y})^2} \)
+- **Mean Absolute Error (MAE)** → mengukur rata-rata error absolut prediksi model → mudah diinterpretasikan karena dalam satuan harga tiket (Rp).
+- **Mean Squared Error (MSE)** → menghitung rata-rata error kuadrat, lebih sensitif terhadap error besar (outlier). 
+- **R² Score** → menjelaskan seberapa baik model dengan variansi data, nilai mendekati 1 berarti model sangat baik.
+Kombinasi ketiga metrik ini memberikan gambaran lengkap: error absolut (MAE), error kuadrat (MSE), dan goodness-of-fit (R²). 
 
 **Hasil Evaluasi (contoh):**  
-- Linear Regression MAE: Rp 50.000  
-- Random Forest MAE: Rp 35.000
+- Linear Regression MAE: 50000  
+- Random Forest MAE: 35000
 - R2 Random Forest : 0.9103
 
 ## Rekomendasi Tanggal Beli Optimal
