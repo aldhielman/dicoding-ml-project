@@ -40,13 +40,24 @@ Menurut riset [Putra, et al., 2021](https://scholar.google.com), harga tiket pes
 ✅ Distribusi harga tiket menunjukkan fluktuasi signifikan, dengan rentang harga yang sangat lebar.  
 ✅ Korelasi `days_before_departure` vs harga: beli jauh hari cenderung lebih murah, beli mepet cenderung mahal.  
 ✅ Harga tiket pada hari libur nasional lebih mahal dibanding hari biasa.  
-✅ Mayoritas orang beli tiket 100–120 hari sebelum keberangkatan.
+✅ Mayoritas orang beli tiket 100–20 hari sebelum keberangkatan.
 
 **Visualisasi Pendukung:**  
-- 📊 **Histogram Harga Tiket:** menunjukkan distribusi harga yang lebar, dengan beberapa outlier mahal.  
-- 📈 **Scatterplot `days_before_departure` vs Harga:** semakin dekat ke tanggal terbang, harga makin tinggi.  
-- 📦 **Boxplot `is_holiday` vs Harga:** libur nasional → harga tiket lebih mahal.  
-- 📊 **Histogram `days_before_departure`:** mayoritas pemesanan di rentang 10–20 hari sebelum berangkat.
+- 📊 **Histogram Harga Tiket:** menunjukkan distribusi harga yang lebar, dengan beberapa outlier mahal.
+  ![image](https://github.com/user-attachments/assets/c96e3d61-fa2d-4083-bcb7-03851b1db848)
+
+- 📈 **Scatterplot `days_before_departure` vs Harga:** semakin dekat ke tanggal terbang, harga makin tinggi.
+  ![image](https://github.com/user-attachments/assets/65f35ee5-79b0-4ebe-b075-4f0da5a88b45)
+
+- 📦 **Boxplot `is_holiday` vs Harga:** libur nasional → harga tiket sedikit lebih mahal.
+  ![image](https://github.com/user-attachments/assets/f49e4a57-96b5-4373-b67a-0fcd968a18da)
+
+- 📦 **Boxplot `is_weekend` vs Harga:** weekend → harga tiket sedikit lebih mahal.
+  ![image](https://github.com/user-attachments/assets/c1d330d5-3b84-4c88-8ab7-815e26b4716b)
+
+- 📊 **Histogram `days_before_departure`:** mayoritas pemesanan di rentang 100–120 hari sebelum berangkat.
+  ![image](https://github.com/user-attachments/assets/f02467e5-cfcd-4641-952b-852bc9f3bebb)
+
 
 ## Data Preparation
 
@@ -95,18 +106,26 @@ Menurut riset [Putra, et al., 2021](https://scholar.google.com), harga tiket pes
 **Hasil Evaluasi (contoh):**  
 - Linear Regression MAE: Rp 50.000  
 - Random Forest MAE: Rp 35.000
+- R2 Random Forest : 0.9103
 
 ## Rekomendasi Tanggal Beli Optimal
 
 ✅ Model prediksi harga untuk `days_before_departure` dalam rentang 1–200 hari.  
-✅ User input: tanggal keberangkatan.  
+✅ User input: tanggal keberangkatan dan dsetinasi / tujuan
 ✅ Model prediksi harga untuk berbagai `days_before_departure`, pilih harga prediksi termurah.  
-✅ Output: tanggal beli optimal yang direkomendasikan.
+✅ Output: tanggal beli optimal yang direkomendasikan dan tanggal beli yang tidak direkomendasikan
 
 **Contoh Output:**  
 - Tanggal terbang: 2025-06-15  
-- Tujuan : Surabaya
-- Rekomendasi tanggal beli: 2025-05-15 (harga prediksi: Rp 650.000)
+- Tujuan : SUB (Surabaya)
+- Tanggal Beli Rekomendasi: 
+    - 2025-05-15 (harga prediksi: Rp 650.000)
+    - 2025-05-10 (harga prediksi: Rp 650.000)
+    - 2025-04-30 (harga prediksi: Rp 655.000)
+- Tanggal Beli Tidak Rekomendasi: 
+    - 2025-05-14 (harga prediksi: Rp 750.000)
+    - 2025-05-09 (harga prediksi: Rp 750.000)
+    - 2025-04-29 (harga prediksi: Rp 755.000)
 
 ## Kesimpulan
 
