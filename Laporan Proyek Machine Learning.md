@@ -6,7 +6,12 @@
 Fluktuasi harga tiket pesawat domestik di Indonesia sangat dinamis. Terutama menjelang periode liburan nasional seperti Lebaran, Natal, dan Tahun Baru, harga tiket dapat melonjak drastis. Masalah ini menjadi penting karena memengaruhi keputusan konsumen dalam membeli tiket, serta strategi pricing maskapai.
 
 **Mengapa Masalah Ini Penting?**  
-Menurut riset [Putra, et al., 2021](https://scholar.google.com), harga tiket pesawat domestik di Indonesia dapat mengalami fluktuasi hingga 50% pada periode high season. Hal ini membuat konsumen sulit merencanakan pembelian tiket secara optimal. Oleh karena itu, memprediksi harga tiket berbasis waktu beli (days_before_departure) dan musim liburan sangat krusial.
+- Menurut [Tempo.co](https://www.tempo.co/hiburan/alasan-beli-tiket-pesawat-menit-menit-terakhir-harganya-lebih-mahal-48645?utm_source=chatgpt.com), membeli tiket mendekati keberangkatan cenderung lebih mahal karena permintaan tinggi dan harga dinamis.  
+- Penelitian [Jurnal Telematika](https://journal.ithb.ac.id/index.php/telematika/article/download/196/pdf/759?utm_source=chatgpt.com) menemukan bahwa waktu pembelian tiket signifikan memengaruhi harga, dengan harga lebih rendah jika dibeli jauh hari sebelum terbang.  
+- [Kementerian Perhubungan RI](https://dephub.go.id/post/read/h-7-lebaran%2C-jumlah-penumpang-angkutan-udara-meningkat-dampak-penurunan-harga-tiket-pesawat-domestik?utm_source=chatgpt.com) melaporkan adanya lonjakan permintaan saat periode libur nasional (Lebaran, Natal, Tahun Baru) yang mendorong harga naik.  
+- Menurut [Kompas.com](https://money.kompas.com/read/2019/12/07/091700326/ini-rahasia-waktu-terbaik-dapatkan-tiket-pesawat-murah?page=all&utm_source=chatgpt.com), harga tiket akhir pekan (Jumat-Minggu) umumnya lebih mahal dibanding hari kerja.
+
+Poin-poin di atas menegaskan bahwa harga tiket sangat dipengaruhi oleh waktu beli, periode libur nasional, dan hari akhir pekan. Oleh karena itu, memprediksi harga tiket berbasis variabel-variabel ini menjadi sangat penting untuk membantu konsumen menghemat biaya perjalanan dan maskapai dalam menyusun strategi harga.
 
 ## Business Understanding
 
